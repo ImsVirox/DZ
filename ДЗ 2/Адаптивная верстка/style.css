@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 1rem;
+  background: #fff8ee;
+  color: #333;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+header {
+  background: #6b3e26;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffb347;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  background: #ff9a00;
+}
+
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.wrapper {
+  display: flex;
+  gap: 20px;
+}
+main {
+  flex: 3;
+}
+aside {
+  flex: 1;
+  background: #ffe3b8;
+  padding: 1rem;
+  align-self: flex-start;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  position: relative;
+  flex: 1 1 28%;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  text-align: center;
+}
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: crimson;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+}
+.pic {
+  height: 120px;
+}
+.red { background: tomato; }
+.green { background: yellowgreen; }
+.orange { background: orange; }
+.brown { background: peru; }
+.pink { background: lightpink; }
+.blue { background: lightskyblue; }
+
+/* О нас */
+article img {
+  float: left;
+  width: 40%;
+  margin: 0 15px 10px 0;
+}
+.clear {
+  clear: both;
+}
+
+
+footer {
+  clear: both;
+  background: #6b3e26;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+/* кнопка наверх */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: crimson;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .card {
+    flex: 1 1 40%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.9rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .card {
+    flex: 1 1 100%;
+    padding: 0.5rem;
+  }
+  aside {
+    padding: 0.5rem;
+  }
+  article img {
+    float: none;
+    width: 100%;
+    margin: 0 0 10px 0;
+  }
+}
